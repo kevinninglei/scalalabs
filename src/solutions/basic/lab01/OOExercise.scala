@@ -28,8 +28,6 @@ object Euro {
     def *(euro: Euro) = euro * i
   }
 
-  //implicit def fromDollar(dollar: Dollar): Euro = Euro.fromCents((DefaultCurrencyConverter.toEuroCents(dollar.inCents)).toInt)
-
   implicit def fromDollar(dollar: Dollar)(implicit converter: CurrencyConverter): Euro = Euro.fromCents(converter.toEuroCents(dollar.inCents))
 }
 

@@ -26,7 +26,8 @@ class HelloWorldExerciseTest extends Specification {
       // JUnitSuite super class, which is part of the ScalaTest library. it behaves
       // as a traditional assertEquals but produces very clear assertion errors when
       // values don't match. In Scala, methods can be used as if they were operators.
-      "Hello from Scala" === HelloWorld.sayHello
+      "Hello from Scala" === 
+      HelloWorld.sayHello == "Hello from Scala"
     }
     "echo" in {
       "Echo" === HelloWorld.echo("Echo")
